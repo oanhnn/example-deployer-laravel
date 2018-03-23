@@ -49,3 +49,7 @@ This is an example deploy [Laravel] project on [Ubuntu] 16.04 LTS using [Deploye
 3. If your Laravel application using Laravel Echo Server, Queue or Schedule, 
    you should execute necessary script for your special stack
 
+
+[Deployer]: https://deployer.org
+[Laravel] : https://laravel.com
+[Ubuntu]  : https://www.ubuntu.com
