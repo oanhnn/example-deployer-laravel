@@ -85,7 +85,7 @@ server {
     ssl_session_timeout        30m;
 
     location / {
-        try_files \$uri \$uri/ =404;
+        try_files \$uri \$uri/ /index.php?\$query_string;
     }
 
     location ~ \\.php$ {
@@ -93,21 +93,21 @@ server {
        fastcgi_pass php-fpm;
     }
 
-    location ~* \\.(?:manifest|appcache|html?|xml|json)$ {
+    location ~* \\.(?:manifest|appcache|html?|xml|json)\$ {
         expires -1;
     }
 
-    location ~* \\.(?:rss|atom)$ {
+    location ~* \\.(?:rss|atom)\$ {
         expires 1h;
         add_header Cache-Control "public";
     }
 
-    location ~* \\.(?:css|js|map)$ {
+    location ~* \\.(?:css|js|map)\$ {
         expires 1M;
         add_header Cache-Control "public";
     }
 
-    location ~* \\.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc|ttf|ttc|otf|eot|woff|woff2)$ {
+    location ~* \\.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc|ttf|ttc|otf|eot|woff|woff2)\$ {
         expires 1M;
         add_header Cache-Control "public";
     }

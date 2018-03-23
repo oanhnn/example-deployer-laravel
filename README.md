@@ -49,7 +49,29 @@ This is an example deploy [Laravel] project on [Ubuntu] 16.04 LTS using [Deploye
 3. If your Laravel application using Laravel Echo Server, Queue or Schedule, 
    you should execute necessary script for your special stack
 
+## Changelog
+
+See all change logs in [CHANGELOG](CHANGELOG.md)
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Security
+
+If you discover any security related issues, please email to [Oanh Nguyen](mailto:oanhnn.bk@gmail.com) instead of 
+using the issue tracker.
+
+## Credits
+
+- [Oanh Nguyen](https://github.com/oanhnn)
+- [All Contributors](../../contributors)
+
+## License
+
+This project is released under the MIT License.   
+Copyright © 2017-2018 [Oanh Nguyen](https://oanhnn.github.io/).
 
 [Deployer]: https://deployer.org
 [Laravel]:  https://laravel.com
-[Ubuntu]:   https://www.ubuntu.com
+[Ubuntu]:   https://ubuntu.com
