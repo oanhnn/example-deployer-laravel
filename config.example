@@ -1,0 +1,17 @@
+#=============================================
+# .ssh/config
+#=============================================
+
+Host example.com
+    Hostname xx.xx.xx.xx
+    Port 22
+    User deployer
+    IdentityFile ./id_rsa_prod
+    IdentitiesOnly yes
+
+Host dev.example.com
+    Hostname xx.xx.xx.xx
+    Port 22
+    User dev
+    IdentityFile ./id_rsa_dev
+    IdentitiesOnly yes

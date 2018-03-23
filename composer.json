@@ -1,0 +1,6 @@
+{
+  "require": {
+    "deployer/deployer": "~6.1",
+    "deployer/recipes": "^6.0"
+  }
+}

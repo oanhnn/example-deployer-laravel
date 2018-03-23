@@ -1,0 +1,22 @@
+.base: &base
+    application: "exmaple.com"
+    repository: "git@gitlab.com:vendor/exmaple.git"
+    roles: ["app", "web", "db", "cron", "queue", "cache"]
+    hostname: "xx.xx.xx.xx"
+    user: "dev"
+    port: 22
+#    configFile: "~/.ssh/config"
+    identityFile: "~/.ssh/id_rsa"
+
+www1.example.com:
+    <<: *base
+    stage: "production"
+    branch: "master"
+    domain: "example.com"
+
+beta1.example.com:
+    <<: *base
+    stage: "beta"
+    branch: "develop"
+    domain: "dev.example.com"
+
