@@ -51,5 +51,5 @@ This is an example deploy [Laravel] project on [Ubuntu] 16.04 LTS using [Deploye
 
 
 [Deployer]: https://deployer.org
-[Laravel] : https://laravel.com
-[Ubuntu]  : https://www.ubuntu.com
+[Laravel]:  https://laravel.com
+[Ubuntu]:   https://www.ubuntu.com
