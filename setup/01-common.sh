@@ -23,7 +23,7 @@ apt-get install -y software-properties-common
 echo "[✔] Add some PPAs"
 
 # Update Package Lists
-apt-get update
+apt-get update -y
 
 # Base Packages
 apt-get install -y build-essential curl fail2ban gcc git libmcrypt4 libpcre3-dev \

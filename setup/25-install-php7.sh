@@ -7,6 +7,9 @@
 # Set environment variables
 export $(cat .env | grep -v ^# | xargs)
 
+apt-add-repository -y ppa:ondrej/php
+apt-get update -y
+
 # Install Base PHP Packages
 apt-get install -y \
     php7.1-common \

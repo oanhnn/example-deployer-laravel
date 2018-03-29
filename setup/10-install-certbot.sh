@@ -7,6 +7,9 @@
 # Set environment variables
 export $(cat .env | grep -v ^# | xargs)
 
+apt-add-repository -y ppa:certbot/certbot
+apt-get update -y
+
 # Install Certbot
 apt-get install -y certbot
 echo "[✔] Install Certbot"
