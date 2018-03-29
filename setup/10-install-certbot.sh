@@ -19,7 +19,10 @@ certbot certonly --standalone --preferred-challenges http -d $DOMAIN -d www.$DOM
 echo "[✔] Make SSL certificate for $DOMAIN"
 
 # Setup auto renew
-echo '02 20 * * 03 sleep $[($RANDOM % 60) + 1]m; /usr/bin/certbot renew --pre-hook "/usr/sbin/service nginx stop" --post-hook "/usr/sbin/service nginx start" --quiet --no-self-upgrade' | crontab -u root -
+rm -rf /tmp/cron-root && touch /tmp/cron-root
+crontab -u root -l > /tmp/cron-root
+echo '02 20 * * 03 sleep $[($RANDOM % 60) + 1]m; /usr/bin/certbot renew --pre-hook "/usr/sbin/service nginx stop" --post-hook "/usr/sbin/service nginx start" --quiet --no-self-upgrade' >> /tmp/cron-root
+cat /tmp/cron-root | crontab -u root -
 echo "[✔] Setup auto renew SSL"
 
 # Unset environment variables

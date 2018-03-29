@@ -59,7 +59,7 @@ server {
     server_tokens off;
 
     location / {
-        return  301 https://$server_name$request_uri;
+        return  301 https://\$server_name\$request_uri;
     }
 }
 
@@ -88,7 +88,7 @@ server {
         try_files \$uri \$uri/ /index.php?\$query_string;
     }
 
-    location ~ \\.php$ {
+    location ~ \\.php\$ {
        include snippets/fastcgi-php.conf;
        fastcgi_pass php-fpm;
     }
