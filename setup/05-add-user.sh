@@ -10,7 +10,7 @@ export $(cat .env | grep -v ^# | xargs)
 # Add user with www-data group
 useradd -g www-data $USER
 mkdir -p /home/$USER/.ssh
-touch /home/$USER/.ssh/authorized_keys
+#touch /home/$USER/.ssh/authorized_keys
 echo "[✔] Make new user $USER"
 
 # Add to sudoers list
